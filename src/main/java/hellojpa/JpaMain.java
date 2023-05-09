@@ -18,6 +18,7 @@ public class JpaMain {
         tx.begin();
 
         try {
+/*
             // insert
 //            Member member = new Member();
 //            member.setId(2L);
@@ -39,6 +40,13 @@ public class JpaMain {
             }
             // update
 //            findMember.setName("HelloJPA");
+*/
+
+            // 비영속 상태
+            Member member = em.find(Member.class, 150L);
+            member.setName("ZZZZZ");
+
+            System.out.println("=============");
 
             tx.commit();
         } catch (Exception e) {

@@ -1,0 +1,8 @@
+# java
+/bin/
+/target/
+/build/
+/out/
+*/build/
+*/bin/*
+*/bin/
