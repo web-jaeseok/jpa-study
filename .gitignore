@@ -6,3 +6,34 @@
 */build/
 */bin/*
 */bin/
+
+# eclipse
+/.settings/
+/.project
+/.classpath
+
+# intelliJ
+/.idea/
+/.idea/*
+*.iml
+*.ipr
+*.iws
+
+# gradle
+/.gradle/
+#/gradle/wrapper/
+#/gradlew
+#/gradlew.bat
+
+
+# logs
+/logs
+*.log
+*/**/spy.log
+keystore.p12
+/crm.spring.sample/build/
+/crm.spring.sample/bin/
+/crm.spring.sample/.settings/
+/crm.spring.sample/.classpath
+/crm.spring.sample/.project
+/crm.da.jdbc/src/main/resources/properties/
