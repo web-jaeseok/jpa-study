@@ -44,7 +44,9 @@ public class JpaMain {
 
             // 비영속 상태
             Member member = em.find(Member.class, 150L);
-            member.setName("ZZZZZ");
+            member.setName("AAAAA");
+
+            em.detach(member);
 
             System.out.println("=============");
 
