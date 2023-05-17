@@ -42,14 +42,6 @@ public class JpaMain {
 //            findMember.setName("HelloJPA");
 */
 
-            // 비영속 상태
-            Member member = em.find(Member.class, 150L);
-            member.setName("AAAAA");
-
-            em.detach(member);
-
-            System.out.println("=============");
-
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
