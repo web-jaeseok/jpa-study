@@ -6,11 +6,12 @@ import java.util.Date;
 @Entity
 public class Member {
 
-    @Id // pk
+    @Id @GeneratedValue
+    @Column(name = "MEMBER_ID")
     private Long id;
 
-    @Column(name = "name", nullable = false, columnDefinition = "varchar(100) default 'EMPTY'")
-    private String username;
+    @Column(name = "USERNAME")
+    private String name;
 
     private Integer age;
 
