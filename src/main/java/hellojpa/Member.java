@@ -11,26 +11,36 @@ public class Member {
     private Long id;
 
     @Column(name = "USERNAME")
-    private String name;
+    private String username;
 
-    private Integer age;
+//    @Column(name = "TEAM_ID")
+//    private Long team;
 
-    @Enumerated(EnumType.STRING)
-    private RoleType roleType;
+    @ManyToOne
+    @JoinColumn(name = "TEAM_ID")
+    private Team team;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdDate;
+    public Long getId() {
+        return id;
+    }
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date lastModifiedDate;
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    @Lob
-    private String description;
+    public String getUsername() {
+        return username;
+    }
 
-    @Transient // db에는 생성하지 않지만 객체에서는 사용하고 싶을 때
-    private int temp;
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-    public Member() {
+    public Team getTeam() {
+        return team;
+    }
 
+    public void setTeam(Team team) {
+        this.team = team;
     }
 }
